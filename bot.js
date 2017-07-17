@@ -31,4 +31,4 @@ setInterval(function () {
       }, this);
     }
   });
-}, 1000);
+}, 10000);
