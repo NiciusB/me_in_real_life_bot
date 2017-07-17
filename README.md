@@ -4,11 +4,13 @@ https://t.me/me_in_real_life_bot
 
 ### Prerequisites
 
-You need to have node.js and npm installed
+You need to have node.js and npm installed.
+
+You'll also need to talk with https://t.me/BotFather to create a bot. Then copy the token.example.js file, rename it to token.js and paste your HTTP API token.
 
 ## Getting Started
 
-Download the repository, and run
+Download the repository, configure your token.js file (see Prerequisites), and run
 ```
 npm install
 node bot.js
