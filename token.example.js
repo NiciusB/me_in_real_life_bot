@@ -1,0 +1,1 @@
+module.exports = '11111111:AAAaaaaaaAaa'
