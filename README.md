@@ -28,4 +28,4 @@ I use a raspberry pi and [PM2](http://pm2.keymetrics.io/) to make sure that the 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Beer-Ware License - see the [LICENSE.md](LICENSE.md) file for details
