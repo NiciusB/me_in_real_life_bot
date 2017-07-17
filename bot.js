@@ -24,9 +24,11 @@ bot.on('message', (msg) => {
 
 setInterval(function () {
   memes.getSpicyMeme(function (meme) {
-    var pic_stream = request.get(meme.data.url).on('error', function (err) { console.log(err); });
-    chatIDs.list().forEach(function (chatId) {
-      bot.sendPhoto(chatId, pic_stream, { caption: 'https://reddit.com' + meme.data.permalink });
-    }, this);
+    if (meme.data && meme.data.preview && meme.data.preview.images && meme.data.preview.images[0].source) {
+      var pic_stream = request.get(meme.data.preview.images[0].source.url).on('error', function (err) { console.log(err); });
+      chatIDs.list().forEach(function (chatId) {
+        bot.sendPhoto(chatId, pic_stream, { caption: meme.data.title });
+      }, this);
+    }
   });
 }, 1000);

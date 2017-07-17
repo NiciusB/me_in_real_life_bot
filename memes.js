@@ -23,7 +23,7 @@ Memes.prototype.checkMemeAlreadySent = function (memeID) {
 }
 Memes.prototype.getSpicyMeme = function (callback) {
   var memeInstance = this;
-  request('https://reddit.com/r/me_irl/.json?sort=hot&limit=5', function (error, response, body) {
+  request('https://reddit.com/r/me_irl/.json?sort=hot&limit=10', function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var parsed = JSON.parse(body);
       parsed.data.children.every(function (meme) {
