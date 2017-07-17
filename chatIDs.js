@@ -1,5 +1,4 @@
 const storage = require('node-persist');
-storage.initSync();
 
 function ChatIDs() {
   this._list = storage.getItemSync('chatIDs');

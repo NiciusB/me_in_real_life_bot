@@ -1,8 +1,6 @@
 const storage = require('node-persist');
 const request = require('request');
 
-storage.initSync();
-
 function Memes() {
   this._list = storage.getItemSync('memes');
   if (!this._list) this._list = []

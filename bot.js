@@ -1,6 +1,8 @@
 const TelegramBot = require('node-telegram-bot-api');
 const token = require('./token.js')
 const bot = new TelegramBot(token, { polling: true });
+const storage = require('node-persist');
+storage.initSync();
 const chatIDs = require('./chatIDs.js');
 const memes = require('./memes.js');
 const request = require('request');
